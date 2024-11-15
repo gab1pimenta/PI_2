@@ -1,0 +1,246 @@
+/* Reset e Estilização Básica */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #003366;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+button{
+  
+    background-color: #003366;
+     
+} 
+.btn-upload-btn{
+    margin-top: 0px;
+    padding: 40px 20px;
+    background-color: #001c4200;
+    color: white;
+    border: none;
+    
+    font-size: 14px;
+    cursor: pointer;
+}
+.cta-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #b5bcc500;
+    font-family: Arial, sans-serif;
+    color:#003366;
+    border: none;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #e6e6e6;
+}
+/* Estilo do seletor de funcionários */
+#funcionario-select {
+    width: 90%; /* Ocupa quase toda a largura do container */
+    padding: 8px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #003366;
+    margin: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+/* Efeito ao focar no seletor */
+#funcionario-select:focus {
+    border-color: #4ab2d4; /* Cor de destaque ao focar */
+    outline: none;
+}
+
+/* Para alinhamento com o formulário de upload */
+.form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+
+
+.phone-container {
+    width: 295px; /* Ajustado para simular o tamanho de um telefone */
+    height: 610px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+.logo {
+    width: 230px; /* Tamanho do logo ajustado */
+    height: auto;
+    margin-bottom: 20px; /* Espaço abaixo do logo */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1 {
+    font-size: 21px; /* Tamanho de fonte regular */
+    font-weight: bold; /* Peso normal para a fonte */
+    color: #003366; /* Azul escuro para o título */
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+h2 {
+    font-size: 19px; /* Tamanho de fonte regular */
+    font-weight: bold; /* Peso normal para a fonte */
+    color: #245d96; /* Azul escuro para o título */
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+li ul {
+    font-size: 15px; /* Tamanho de fonte regular */
+    font-weight: bold; /* Peso normal para a fonte */
+    color: #555555; /* Azul escuro para o título */
+    align-items: LEFT;   ; /* Centraliza o título */
+    margin-bottom: 10px; /* Espaço abaixo do título */
+    margin-left: 5px;
+}
+
+
+.icon {
+    width: 20px; /* Largura do ícone */
+    height: 20px; /* Altura do ícone */
+    margin-right: 0px; /* Espaçamento à direita do ícone */
+    align-items: LEFT;
+    
+}
+.top-bar {
+    padding: 8px;
+    background-color: #001c42;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar {
+    width: 90%;
+    padding: 8px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.welcome-section {
+    text-align: center;
+    padding: 15px 10px;
+    color: #333;
+}
+
+.welcome-section h2 {
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.welcome-section p {
+    margin: 2px;
+    font-size: 14px;
+    color: #666;
+}
+
+ 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.upload-btn {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    padding: 2px 2px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #4caf4f00; 
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.upload-btn:hover {
+    background-color: #b2dff3;
+}
+
+.upload-gif {
+    width: 4px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto;
+    margin-right: 2px;
+}
+
+.submit-btn {
+    background-color: #4ab2d4; /* Cor de fundo azul */
+    color: white;
+    border: none;
+    padding: 3px 3px;
+    border-radius: 1px;
+    margin-top: 3px;
+}
+
+.submit-btn:hover {
+    background-color: #007bb5;
+}
+
+
+.bottom-nav2 {
+   
+    justify-content: space-around;
+    align-items: left;
+    padding: 8px;
+    background-color: #ffffff;
+    border-top: 1px solid #ddd;
+}
+.bottom-nav2 a {
+    text-decoration: none;
+    color: #004cb8;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 100px;
+}
+
+.bottom-nav2 a:hover {
+    color: #012858;
+}
+
+select {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+select {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 100%;
+}

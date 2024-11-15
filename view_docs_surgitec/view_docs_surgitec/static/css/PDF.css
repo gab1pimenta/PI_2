@@ -1,0 +1,144 @@
+
+h1 {
+    font-size: 21px; /* Tamanho de fonte regular */
+    font-weight: bold; /* Peso normal para a fonte */
+    color: #003366; /* Azul escuro para o título */
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+/* Corpo e layout geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #003366;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.top-bar {
+    padding: 12px;
+    background-color: #001c42;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Contêiner simulando o celular (Samsung Galaxy A34) */
+.phone-container {
+    width: 295px;  /* Largura aproximada em pixels */
+    height: 610px; /* Altura aproximada em pixels */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    padding: .0px;
+    overflow: hidden;
+}
+p {
+    font-size: 12px; /* Tamanho de fonte regular */
+    font-weight: bold; /* Peso normal para a fonte */
+    color: #666c72; /* Azul escuro para o título */
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+/* Logo dentro da tela do celular */
+.logo {
+    width: 230px;  /* Tamanho do logo ajustado */
+    height: auto;
+    margin-bottom: 20px; /* Espaço abaixo do logo */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.button-list li {
+    margin: 10px 0; /* Espaço entre os botões */
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: left; /* Alinha o ícone e o texto no centro verticalmente */
+    justify-content: left; /* Alinha o ícone à esquerda e o texto à direita */
+    width: 100%; /* O botão ocupará toda a largura do contêiner */
+    transition: background-color 0.3s ease; /* Transição suave para a cor do fundo */
+}
+
+.cta-button {
+    
+    padding: 10px 20px;
+    background-color: #001c42;
+    color: white;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #244a7a;
+}
+
+/* Estilos para o ícone */
+.icon {
+    width: 20px; /* Largura do ícone */
+    height: 20px; /* Altura do ícone */
+    margin-right: 10px; /* Espaçamento à direita do ícone */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    button {
+        font-size: 14px; /* Reduz o tamanho da fonte em telas pequenas */
+        padding: 8px 15px; /* Ajusta o espaçamento interno do botão */
+    }
+    .icon {
+        width: 16px; /* Ajusta o tamanho do ícone em telas menores */
+        height: 16px;
+    }
+}
+::-webkit-scrollbar-track {
+    background-color: #1a0061;
+}
+::-webkit-scrollbar {
+    width: 6px;
+    background: #414a9c;
+}
+::-webkit-scrollbar-thumb {
+    background: #95a2a8;
+}
+
+/* Logo dentro da tela do celular */
+.logo {
+    width: 230px;  /* Tamanho do logo ajustado */
+    height: auto;
+    margin-bottom: 20px; /* Espaço abaixo do logo */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Garantindo que o conteúdo da página seja rolável se necessário */
+.phone-container {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    height: auto;
+    color: white;
+    max-height: 610px;
+}
+
+/* PDF Container */
+.pdf-container iframe {
+    border: none;
+    width: 100%; /* Ajusta o tamanho do iframe */
+    height: 500px; /* Define a altura do iframe para visualizar o PDF */
+}
+
+/* Botões */

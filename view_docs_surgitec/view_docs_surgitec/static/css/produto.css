@@ -1,0 +1,214 @@
+/* Reset e Estilização Básica */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #003366;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.phone-container {
+    width: 295px; /* Ajustado para simular o tamanho de um telefone */
+    height: 610px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+.logo {
+    width: 230px; /* Tamanho do logo ajustado */
+    height: auto;
+    margin-bottom: 20px; /* Espaço abaixo do logo */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1 {
+    font-size: 21px; /* Tamanho de fonte regular */
+    font-weight: bold; /* Peso normal para a fonte */
+    color: #003366; /* Azul escuro para o título */
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+P {
+    font-size: 15px; /* Tamanho de fonte regular */
+    font-weight: bold; /* Peso normal para a fonte */
+    color: #003366; /* Azul escuro para o título */
+    align-items: LEFT;   ; /* Centraliza o título */
+    margin-bottom: 0px; /* Espaço abaixo do título */
+}
+.icon {
+    width: 20px; /* Largura do ícone */
+    height: 20px; /* Altura do ícone */
+    margin-right: 0px; /* Espaçamento à direita do ícone */
+    align-items: LEFT;
+    
+}
+.top-bar {
+    padding: 8px;
+    background-color: #001c42;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar {
+    width: 90%;
+    padding: 8px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.welcome-section {
+    text-align: center;
+    padding: 15px 10px;
+    color: #333;
+}
+
+.welcome-section h2 {
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.welcome-section p {
+    margin: 2px;
+    font-size: 14px;
+    color: #666;
+}
+
+.cta-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #001c42;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    cursor: pointer;
+    display: flex;
+    align-items: left; /* Alinha o ícone e o texto no centro verticalmente */
+    justify-content: left; /* Alinha o ícone à esquerda e o texto à direita */
+    width: 100%; /* O botão ocupará toda a largura do contêiner */
+    transition: background-color 0.3s ease; /* Transição suave para a cor do fundo */
+}
+
+.cta-button:hover {
+    background-color: #244a7a;
+}
+
+/* Estilos para o ícone */
+
+/* Seção de Serviços */
+.service-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 15px 10px;
+    flex-grow: 1;
+}
+
+/* Estilização do Cartão de Serviço */
+ 
+
+.service-card {
+    background-color: #e6e6e6;
+    border-radius: 15px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    background-image: url('https://via.placeholder.com/150'); /* Imagem de placeholder */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito de Hover nos Cartões */
+.service-card:hover {
+    transform: scale(1.05); /* Leve aumento de tamanho ao passar o mouse */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Texto do Cartão */
+.service-card p {
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro semi-transparente */
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Navegação Inferior */
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-top: 1px solid #ddd;
+}
+
+.bottom-nav a {
+    text-decoration: none;
+    color: #2d5f9a;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 5%;
+}
+
+.bottom-nav a:hover {
+    color: #244a7a;
+}
+.bottom-nav2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: left;
+    padding: 10px;
+    background-color: #ffffff;
+    border-top: 1px solid #ddd;
+}
+.bottom-nav2 a {
+    text-decoration: none;
+    color: #004cb8;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.bottom-nav2 a:hover {
+    color: #012858;
+}
+
+
+.bottom-nav3 {
+      align-items: center;
+    padding: 2px;
+     align-items: left;
+}
+
+.bottom-nav3 a {
+    text-decoration: none;
+    color: #0b4892;
+    font-size: 12px;
+       
+    
+}
+
+.bottom-nav3 a:hover {
+    color: #0400fff5;}

@@ -16,12 +16,15 @@ urlpatterns = [
     path('cadastrar_funcionario/sucesso/', views.cadastro_sucesso, name='cadastrar_funcionario_sucesso'), 
     #pagina de login
     path('login/', views.login_view, name='login'), 
-    # Página inicial pós-login
-    #path('pagina_inicial/', views.pagina_inicial, name='pagina_inicial'),
     # Gestor 
     path('pagina_gestor/', views.pagina_gestor, name='pagina_gestor'),
+    # Atribuir PDF ao funcionário
+    path('atribuir_pdf/<int:funcionario_id>/', views.atribuir_pdf, name='atribuir_pdf'),   
     #Funcionário
-    path('pagina_funcionario/', views.pagina_funcionario, name='pagina_funcionario')
+    path('pagina_funcionario/', views.pagina_funcionario, name='pagina_funcionario'),
+
+    #path('upload/', views.upload_pdf, name='upload_pdf'),
+    # outras rotas
 ]
 
 

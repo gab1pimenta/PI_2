@@ -1,0 +1,128 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Título "Cadastrar Funcionário" */
+h1 {
+    font-size: 21px; /* Tamanho de fonte regular */
+    font-weight: bold; /* Peso normal para a fonte */
+    color: #003366; /* Azul escuro para o título */
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+
+/* Corpo e layout geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #003366;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contêiner simulando o celular (Samsung Galaxy A34) */
+.phone-container {
+    width: 295px;  /* Largura aproximada em pixels */
+    height: 610px; /* Altura aproximada em pixels */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow: hidden;
+}
+.cta-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #5475a3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #1f60b1;
+}
+
+
+
+/* Logo dentro da tela do celular */
+.logo {
+    width: 230px;  /* Tamanho do logo ajustado */
+    height: auto;
+    margin-bottom: 20px; /* Espaço abaixo do logo */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Formulário */
+form {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Agrupamento dos campos do formulário */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    width: 100%;
+}
+
+.input-group input:focus {
+    border-color: #007bff;
+}
+
+/* Botão de submit */
+.submit-btn {
+    background-color: #003366;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Link "Voltar para Home" */
+.footer-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-links .back-btn {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links .back-btn:hover {
+    color: #0056b3;
+}

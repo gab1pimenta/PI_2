@@ -3,29 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastrar Funcionário</title>
+    <title>Cadastro de Funcionário</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-    <h1>Cadastrar Funcionário</h1>
+    <div class="phone-container">
+        <div class="form-box">
+            
+            <img src="{% static 'imagens/surgitec-logo-cor.png' %}" alt="Logo Surgitec" class="logo">
+
+        
+    <h1>Cadastro de Funcionário</h1>
     <form method="POST">
         {% csrf_token %}
-        <label for="nome">Nome:</label><br>
-        <input type="text" id="nome" name="nome" required><br>
+        <div class="input-group">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+        </div>
+        <div class="input-group">
+            <label for="usuario">Usuário:</label>
+            <input type="text" id="usuario" name="usuario" required>
+        </div>
+        <div class="input-group">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+        </div>
+        <div class="input-group">
+            <label for="funcao">Função:</label>
+            <input type="text" id="funcao" name="funcao" required>
+        </div>
+        <button type="submit" class="submit-btn">Cadastrar</button>
         
-        <label for="usuario">Usuário:</label><br>
-        <input type="text" id="usuario" name="usuario" required><br>
-        
-        <label for="senha">Senha:</label><br>
-        <input type="password" id="senha" name="senha" required><br>
-        
-        <label for="funcao">Função:</label><br>
-        <input type="text" id="funcao" name="funcao" required><br><br>
-        
-        <input type="submit" value="Cadastrar">
     </form>
-    <br>
-    <a href="{% url 'home' %}" class="btn">Voltar a Home</a> <!-- fazer o botão no css -->
+    <div class="footer-links">
+          
+      <a class="cta-button" href="{% url 'home' %}">Voltar para a Home</a>
 
+    </div>
+</div>
+</div>
 </body>
 </html>
 

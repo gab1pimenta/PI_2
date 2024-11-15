@@ -3,13 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Aplicativo de Serviços Médicos</title>
     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/homestyles.css' %}">
 </head>
 <body>
-    <h1>Bem-vindo ao sistema de gerenciamento de PDFs da Surgitec!</h1>
-    <a href="/cadastrar_funcionario/" class="btn">Cadastrar Funcionário</a>
-    <a href="/login/" class="btn">Logar</a>
+    <div class="phone-container">
+       
+        <div class="top-bar">
+            
+            <img src="{% static 'imagens/surgitec-logo-branco.svg' %}" alt="Logo Surgitec" class="logo">
+        </div>
+            <div class="top-bar">
+        <input type="text" placeholder="Search..." class="search-bar">
+            
+        </div>
+        
+        <div class="welcome-section">
+            <h2>View Docs</h2>
+               <div class="button-container">
+        <a href="/login/" class="cta-button">Equipe</a>
+        <a href="/login/" class="cta-button">Gestor</a>
+    </div>
+</div>
+
+        <div class="service-section">
+            <a href="instrumentais.html" class="service-card" style="background-image: url('{% static 'imagens/instrumentais.jpg' %}');">
+                <p>Instrumentais</p>
+            </a>
+            <a href="eletroudos.html" class="service-card" style="background-image: url('{% static 'imagens/eletroudo.jpg' %}');">
+                <p>Eletroudos</p>
+            </a>
+            <a href="endoscopicos.html" class="service-card" style="background-image: url('{% static 'imagens/endoscopicos.jpg' %}');">
+                <p>Endoscopicos</p>
+            </a>
+            <a href="implantaveis.html" class="service-card" style="background-image: url('{% static 'imagens/implantaveis.jpg' %}');">
+                <p>Implantaveis</p>
+            </a>
+            <a href="kits_cirurgicos.html" class="service-card" style="background-image: url('{% static 'imagens/kits-cirurgicos.jpg' %}');">
+                <p>Kit's Cirurgicos</p>
+            </a>
+        </div>
+        
+         
+
+        <div class="bottom-nav">
+            <a href="/cadastrar_funcionario/">Cadastro</a>
+            <a href="https://www.surgitec.com.br/">Site</a>
+            <a href="https://consultas.anvisa.gov.br/#/saude/">Anvisa</a> 
+            <a href="https://www.normas.com.br/">Normas ABNT</a>
+        </div>
+    </div>
+    
 </body>
 </html>

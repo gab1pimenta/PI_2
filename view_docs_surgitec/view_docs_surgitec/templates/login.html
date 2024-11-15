@@ -4,22 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    {% load static %}  
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styleS.css' %}">
 </head>
 <body>
-    <h1>Página de Login</h1>
-    <form method="POST">
-        {% csrf_token %}
-        <label for="username">Usuário:</label>
-        <input type="text" id="username" name="username" required><br>
+    <div class="phone-container">
+        <div class="form-box">
+           
+            <img src="{% static 'imagens/surgitec-logo-cor.png' %}" alt="Logo Surgitec" class="logo">
+            
+            <h1>Faça o seu login</h1>
+            <form method="POST">
+                {% csrf_token %}
+                
+                <div class="input-group">
+                    <label for="username">Usuário:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+               
+                <button type="submit" class="submit-btn">Login</button>
+            </form>
         
-        <label for="password">Senha:</label>
-        <input type="password" id="password" name="password" required><br>
-        
-        <button type="submit">Logar</button>
-    </form>
-    <br>
-    <a href="{% url 'home' %}" class="btn">Voltar a Home</a> <!-- fazer o botão no css -->
+            </div>
+        </div>
+    </div>
 </body>
 </html>

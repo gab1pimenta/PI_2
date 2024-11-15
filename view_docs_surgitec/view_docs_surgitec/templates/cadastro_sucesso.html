@@ -3,12 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sucesso no Cadastro</title>
-    {% load static %}  
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <title>Cadastro realizado com sucesso!</title>
+    
+    
+    {% load static %}
+   
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles-copy.css' %}">
 </head>
 <body>
-    <h1>Cadastro realizado com sucesso!</h1>
-    <a href="{% url 'home' %}" class="btn">Voltar para Home</a>
+    <div class="phone-container">
+        <div class="form-box">
+            
+            
+            <img src="{% static 'imagens/surgitec-logo-cor.png' %}" alt="Logo Surgitec" class="logo">
+            
+            <h1>Cadastro realizado com sucesso!</h1>
+            
+            
+            <img src="{% static 'imagens/icons8-crachá-verificado.gif' %}" alt="Gif de Sucesso" class="gif">
+
+            <div class="footer-links">
+                
+                <a href="{% url 'home' %}" class="back-btn">Voltar a Home</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

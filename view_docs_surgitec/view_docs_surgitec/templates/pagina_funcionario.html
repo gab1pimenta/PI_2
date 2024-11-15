@@ -4,10 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página do Funcionário</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/pdf.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
 </head>
+
 <body>
-    <h1>Bem-vindo, Funcionário!</h1>
-    <p>Aqui você pode acessar os documentos atribuídos a você.</p>
-    <a href="/">Voltar para a Home</a>
+    <div class="phone-container">
+        <div class="top-bar">
+            
+            <img src="{% static 'imagens/surgitec-logo-branco.svg' %}" alt="Logo Surgitec" class="logo">
+        </div>
+        <div class="form-box"></div>
+
+        <h1>Bem-vindo, Funcionário!</h1>
+        <p>Aqui você pode acessar os documentos atribuídos ao produto escolhido.</p>
+
+        
+        <div class="pdf-container">
+            <!-- Carregando o PDF via iframe -->
+            <iframe id="pdf-frame" src="https://drive.google.com/file/d/{{ arquivo.id }}/preview" width="100%" height="500px"></iframe>
+        </div>
+
+        <!-- Botão para ler o PDF em voz alta -->
+        <div>
+            <button class="cta-button" onclick="lerPdfEmVozAlta()">Ler PDF em voz alta</button>
+        </div>
+
+        <script>
+            function lerPdfEmVozAlta() {
+                const pdfUrl = "https://drive.google.com/uc?id={{ arquivo.id }}"; // URL do PDF
+        
+                // Carregar o PDF usando pdf.js
+                pdfjsLib.getDocument(pdfUrl).promise.then(function(pdf) {
+                    let textoCompleto = "";
+                    let totalPages = pdf.numPages;
+                    let pagePromises = [];
+        
+                    for (let i = 1; i <= totalPages; i++) {
+                        pagePromises.push(pdf.getPage(i).then(function(page) {
+                            return page.getTextContent().then(function(textContent) {
+                                // Juntar o texto extraído de cada página
+                                return textContent.items.map(item => item.str).join(" ");
+                            });
+                        }));
+                    }
+        
+                    // Quando todo o texto for extraído
+                    Promise.all(pagePromises).then(function(paginasTexto) {
+                        textoCompleto = paginasTexto.join(" ");
+                        falarTexto(textoCompleto);
+                    });
+                }).catch(function(error) {
+                    console.error('Erro ao carregar o PDF:', error);
+                });
+            }
+        
+            // Função para falar o texto extraído
+            function falarTexto(texto) {
+                if (texto.trim() === "") {
+                    alert("Não há texto suficiente para ler.");
+                    return;
+                }
+        
+                const synth = window.speechSynthesis;
+                const utterance = new SpeechSynthesisUtterance(texto);
+                utterance.lang = 'pt-BR'; // Define o idioma como português
+                utterance.rate = 1; // Velocidade de fala padrão
+                synth.speak(utterance);
+            }
+        </script>
+        
+        <div>
+            <button class="cta-button" onclick="alterarTamanhoFonte('aumentar')">Aumentar Fonte</button>
+        </div>
+        <div>
+            <button class="cta-button" onclick="alterarTamanhoFonte('diminuir')">Diminuir Fonte</button>
+        </div>
+
+
+        <a class="cta-button" href="{% url 'home' %}">Voltar para a Home</a>
+    </div>
+
+    <script>
+        // Função para alterar o tamanho da fonte
+        function alterarTamanhoFonte(acao) {
+            var corpo = document.body;
+            var tamanhoAtual = parseInt(window.getComputedStyle(corpo).fontSize);
+
+            if (acao === 'aumentar') {
+                corpo.style.fontSize = (tamanhoAtual + 2) + 'px'; // Aumenta 2px
+            } else if (acao === 'diminuir') {
+                corpo.style.fontSize = (tamanhoAtual - 2) + 'px'; // Diminui 2px
+            }
+        }
+    </script>
 </body>
 </html>

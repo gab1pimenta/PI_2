@@ -3,39 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página do Gestor</title>
+    <title>Aplicativo de Serviços Médicos</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/bemvindo.css' %}">
 </head>
 <body>
-
     <div class="phone-container">
-        
-        <!-- Barra superior com logo -->
         <div class="top-bar">
             <img src="{% static 'imagens/surgitec-logo-branco.svg' %}" alt="Logo Surgitec" class="logo">
         </div>
-        
-        <!-- Seção de boas-vindas -->
         <div class="welcome-section">
             <h1>Bem-vindo, Gestor!</h1>
             <p>Bem-vindo ao sistema de gerenciamento de PDFs da Surgitec!</p>
 
-            <h2>Funcionários Cadastrados</h2>
-            <ul>
-             <!-- Exibir a lista de funcionários -->
-                {% for funcionario in funcionarios %}
-                    <li>
-                        <a href="{% url 'atribuir_pdf' funcionario.id %}" class="btn">
-                            {{ funcionario.nome }} 
-                        </a>
-                    </li>
-            
-                {% empty %}
-                    <li>Nenhum funcionário cadastrado.</li>
-                {% endfor %}
-        
-            </ul>
+            <div class="container">
+                <form method="POST">
+                    {% csrf_token %}
+                    <label for="pdf_id" class="btn-upload-btn">
+                        <img src="{% static 'imagens/upload.gif' %}" alt="Gif de Sucesso" class="gif">
+                    </label>
+                    <select name="pdf_id">
+                        {% for item in arquivos %}
+                            <option value="{{ item.id }}">{{ item.name }}</option>
+                        {% endfor %}
+                    </select>
+                    <button type="submit" class="cta-button">Enviar PDF</button>
+                </form>
+            </div>
             <div class="bottom-nav2">        
                 <a class="cta-button" href="{% url 'home' %}">Voltar para Home</a>
             </div>
@@ -45,4 +39,3 @@
             </div>
 </body>
 </html>
-
